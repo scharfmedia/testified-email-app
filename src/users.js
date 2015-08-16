@@ -1,13 +1,14 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
 import 'fetch';
+import {Client} from './services/api'
 
-@inject(HttpClient)
+@inject(HttpClient,Client)
 export class Users{
   heading = 'Github Users';
   users = [];
 
-  constructor(http){
+  constructor(http,client){
     http.configure(config => {
       config
         .useStandardConfiguration()
@@ -15,11 +16,16 @@ export class Users{
     });
 
     this.http = http;
+    this.client = client;
   }
 
   activate(){
-    return this.http.fetch('users')
-      .then(response => response.json())
-      .then(users => this.users = users);
+    if( this.client.authenticated ) {
+        return this.http.fetch('users')
+          .then(response => response.json())
+          .then(users => this.users = users);
+    } else {
+        return Promise.reject("welcome");
+    }
   }
 }
