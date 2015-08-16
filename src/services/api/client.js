@@ -35,4 +35,10 @@ export class Client {
         this.session = {};
         return true;
     });}
+
+    // TODO
+    signup(email,password) { return Promise.resolve().then( ()=> {
+        return true
+    });}
+
 }

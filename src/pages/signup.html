@@ -2,9 +2,9 @@
   <section class="au-animate">
     <h2>Testified Email
     </h2>
-    <h3>${heading}</h3>
+    <h3>Create a account</h3>
 
-    <form role="form" submit.delegate="submit()">
+    <form role="form" submit.delegate="signup()">
       <div class="form-group">
         <label for="fn">Email</label>
         <input type="text" disabled.bind="isBusy" value.bind="email" class="form-control" id="fn" placeholder="email">
@@ -13,11 +13,13 @@
         <label for="ln">Password</label>
         <input type="password" disabled.bind="isBusy" value.bind="password" class="form-control" id="ln" placeholder="password">
       </div>
-      <button type="submit" disabled.bind="isBusy" class="btn btn-default">Login
+      <button type="submit" disabled.bind="isBusy" class="btn btn-default">Signup
           <span class="loader" if.bind="isBusy">
             <i class="fa fa-spinner fa-spin fa-2x"></i>
           </span>
       </button>
+      <a route-href="route: login">Or login...</a>
+
     </form>
   </section>
 </template>

@@ -5,7 +5,7 @@ export class Client {
     session = {};
 
     // mock db
-    _db = { users: [] };
+    _db = { users: [], sessions: {} };
 
     constructor(http) {
         this.http = http; // isnt used, but for api compliance
@@ -60,6 +60,7 @@ export class Client {
             email: email,
             password: password
         });
+        return true;
     });}
 }
 
@@ -69,4 +70,12 @@ function createMockData(c) {
         email: "test@testified.email",
         password: "test"
     });
+    var testUser = c._db.users[0];
+
+    c._db.users.push({
+        username: `-hans@web.de-`,
+        email: "hans@web.de",
+        password: "test"
+    });
+    var hansUser = c._db.users[1];
 }

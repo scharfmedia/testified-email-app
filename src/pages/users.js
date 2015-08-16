@@ -1,7 +1,7 @@
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
 import 'fetch';
-import {Client} from './services/api'
+import {Client} from '../services/api'
 
 @inject(HttpClient,Client)
 export class Users{

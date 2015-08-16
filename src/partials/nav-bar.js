@@ -1,5 +1,5 @@
 import {bindable,inject} from 'aurelia-framework';
-import {Client} from './services/api';
+import {Client} from '../services/api';
 
 @inject(Client)
 export class NavBar {

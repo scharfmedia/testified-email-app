@@ -3,16 +3,13 @@ import 'bootstrap/css/bootstrap.css!';
 import {inject} from 'aurelia-framework';
 import {Client} from './services/api';
 import {Redirect} from 'aurelia-router';
+import routeConfig from './route-config';
 
 export class App {
   configureRouter(config, router){
     config.title = 'Testified Email App';
     config.addPipelineStep('authorize', AuthorizeStep);
-    config.map([
-      { route: ['','login'],    name: 'login',        moduleId: 'ui/login',     nav: false, auth: false, title:'Login' },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true,  auth: true,  title:'Github Users' },
-      { route: 'logout',        name: 'logout',       moduleId: 'ui/logout',    nav: true,  auth: true,  title:'Logout' }
-    ]);
+    config.map(routeConfig);
 
     this.router = router;
   }
