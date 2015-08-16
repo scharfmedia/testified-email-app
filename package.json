@@ -1,22 +1,26 @@
 {
-  "name": "aurelia-skeleton-navigation",
+  "name": "testified-email-app",
   "version": "0.17.0",
-  "description": "A starter kit for building a standard navigation-style app with Aurelia.",
+  "description": "The testified-email App. Copyright (c) 2015 scharfmedia GmbH",
+  "private": true,
   "keywords": [
-    "aurelia",
-    "navigation",
-    "skeleton"
+    "testified",
+    "email"
   ],
-  "homepage": "http://aurelia.io",
+  "homepage": "http://testified.email",
   "bugs": {
-    "url": "https://github.com/aurelia/skeleton-navigation/issues"
+    "url": "https://github.com/scharfmedia/testified-email-app/issues"
   },
-  "license": "MIT",
-  "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
+  "license": "Proprietary",
+  "author": "Christoph Scharf <christoph.scharf@scharfmedia.de> (http://www.scharfmedia.de/)",
   "main": "dist/commonjs/index.js",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia/skeleton-navigation"
+    "url": "http://github.com/scharfmedia/testified-email-app"
+  },
+  "scripts": {
+    "postinstall": "jspm install -y",
+    "start": "gulp watch"
   },
   "devDependencies": {
     "aurelia-cli": "^0.3.1",
@@ -24,7 +28,7 @@
     "browser-sync": "^1.8.1",
     "conventional-changelog": "0.0.11",
     "del": "^1.1.0",
-    "gulp": "^3.8.10",
+    "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-bump": "^0.3.1",
     "gulp-changed": "^1.1.0",
@@ -35,6 +39,7 @@
     "gulp-yuidoc": "^0.1.2",
     "jasmine-core": "^2.1.3",
     "jshint-stylish": "^1.0.0",
+    "jspm": "^0.16.0-beta.7",
     "karma": "^0.12.28",
     "karma-babel-preprocessor": "^5.2.1",
     "karma-chrome-launcher": "^0.1.7",
@@ -78,8 +83,8 @@
       "font-awesome": "npm:font-awesome@^4.3.0"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.1.13",
-      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "babel": "npm:babel-core@^5.8.21",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
       "core-js": "npm:core-js@^0.9.4"
     },
     "overrides": {

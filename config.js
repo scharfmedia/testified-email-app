@@ -1,22 +1,20 @@
 System.config({
-  "defaultJSExtensions": true,
-  "transpiler": "babel",
-  "babelOptions": {
+  defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
     "optional": [
       "es7.decorators",
       "es7.classProperties",
       "runtime"
     ]
   },
-  "paths": {
+  paths: {
     "*": "dist/*",
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  }
-});
+  },
 
-System.config({
-  "map": {
+  map: {
     "aurelia-animator-css": "github:aurelia/animator-css@0.15.0",
     "aurelia-binding": "github:aurelia/binding@0.8.6",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.16.0",
@@ -39,11 +37,11 @@ System.config({
     "aurelia-templating-resources": "github:aurelia/templating-resources@0.14.0",
     "aurelia-templating-router": "github:aurelia/templating-router@0.15.0",
     "aurelia/fetch-client": "github:aurelia/fetch-client@0.1.1",
-    "babel": "npm:babel-core@5.8.21",
+    "babel": "npm:babel-core@5.8.22",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "clean-css": "npm:clean-css@3.3.8",
-    "core-js": "npm:core-js@0.9.18",
+    "core-js": "npm:core-js@1.0.1",
     "css": "github:systemjs/plugin-css@0.1.13",
     "fetch": "github:github/fetch@0.9.0",
     "font-awesome": "npm:font-awesome@4.4.0",
@@ -244,6 +242,11 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:core-js@1.0.1": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
@@ -302,4 +305,3 @@ System.config({
     }
   }
 });
-
